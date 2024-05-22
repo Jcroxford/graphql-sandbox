@@ -20,4 +20,4 @@ Here's what needs to be added:
 * [ ] add a query for an idividual book by id
 * [ ] add a genre type to books and authors - turns out, it's a compliance issue if you don't disclose the genre to a reader up front so they know what they're getting into.
 * [ ] add a mutation for editing a book's title
-* [ ] add a genre query that returns a paginated list of books and/or authors
+* [ ] add a genre query that returns a paginated list of books and/or authors. Btw, we want to be able to search by for authors by their name.

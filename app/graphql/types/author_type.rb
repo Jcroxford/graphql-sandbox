@@ -11,7 +11,7 @@ module Types
     # The most basic list type is strictly just defining a field as an array
     # and then returning that array
     #
-    field(:books, [Types::BookType], null: false)
+    # field(:books, [Types::BookType], null: false)
 
     # In this case, this function is optional because the author model has a
     # function (has_many :books) that responds to a call for books
@@ -25,9 +25,9 @@ module Types
     # returned an ActiveRecord Author model. In this scenario for this books
     # function, the Author active record model is what "object" would be.
     #
-    def books
-      object.books
-    end
+    # def books
+    #   object.books
+    # end
 
     # ________________________________________________________________________
 
@@ -60,7 +60,7 @@ module Types
     # we are encapsulating pagination and filtering arguments with this resolver
     # instead of defining them in line like the previous examples
     #
-    # field(:books, resolver: Resolvers::BooksResolver)
+    field(:books, resolver: Resolvers::BooksResolver)
 
     # ========================================================================
     # end several author field examples

@@ -86,7 +86,7 @@ GEM
     graphiql-rails (1.8.0)
       railties
       sprockets-rails
-    graphql (2.0.24)
+    graphql (1.13.16)
     graphql_playground-rails (2.1.0)
       rails (>= 5.1.0)
     i18n (1.14.5)
@@ -180,6 +180,10 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    search_object (1.2.4)
+    search_object_graphql (0.3.2)
+      graphql (~> 1.8)
+      search_object (~> 1.2.2)
     selenium-webdriver (4.10.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -241,6 +245,7 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7)
   sass-rails (>= 6)
+  search_object_graphql
   selenium-webdriver (>= 4.0.0.rc1)
   spring
   sqlite3 (~> 1.4)

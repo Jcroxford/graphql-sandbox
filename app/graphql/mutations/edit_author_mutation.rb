@@ -1,6 +1,6 @@
 module Mutations
   class EditAuthorMutation < Mutations::BaseMutation
-    type("Types::AuthorType", null: false)
+    field(:author, Types::AuthorType, null: false)
 
     argument(:id, ID, required: true)
     argument(:attributes, Types::EditAuthorAttributesType, required: true)

@@ -5,20 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* clone repo
+* run command `bundle install`
+* run command `rails db:migrate`
+* run command `rails db:seed`
+* run command `rails start`
+* you should now be able to see the app running on http://localhost:3000

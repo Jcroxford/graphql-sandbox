@@ -1,8 +1,8 @@
 module Resolvers
   class AuthorResolver < Resolvers::BaseResolver
-    type(Types::AuthorType, null: true)
+    type("Types::AuthorType", null: true)
 
-    argument(:id, ID, required: false)
+    argument(:id, ID, required: true)
 
     def resolve(id:)
       # POP QUIZ: what's missing here that we _always_ want in the real world?

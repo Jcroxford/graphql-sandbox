@@ -1,0 +1,81 @@
+# basic author query
+query author {
+  author(id: 2) {
+    id
+    name
+  }
+}
+
+# author with book list
+query authorByWithBookslist {
+  author(id: 1) {
+    id
+    name
+    books {
+      id
+      title
+    }
+  }
+}
+
+# query for author with paginated book list
+query authorByIdWithPaginatedBooks {
+  author(id: 1) {
+    id
+    name
+    books(last: 2 before: "Mw") {
+      nodes {
+        id
+        title
+      }
+      edges {
+        cursor
+        node {
+          id
+          title
+        }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}
+
+# query for author and their books with the option to search
+query authorByIdWithBookSearch {
+  author(id: 1) {
+    id
+    name
+    books(first: 10 search: "The") {
+      nodes {
+        id
+        title
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}
+
+# edit an outhor
+mutation editAuthor {
+  editAuthor(input: {
+    id: 1
+    attributes: {
+      name: "Brandon Sanderson"
+    }
+  }) {
+    author {
+      id
+    	name
+    }
+  }
+}
